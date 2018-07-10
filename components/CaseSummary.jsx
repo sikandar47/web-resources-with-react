@@ -15,7 +15,7 @@ export default React.createClass({
             '&$top=10' +
             '&$select=incidentid,title,createdon,ticketnumber';
 
-        url = Xrm.Page.context.prependOrgName(url);
+        url = window.parent.Xrm.Page.context.prependOrgName(url);
         fetch(url, {
             credentials: 'same-origin'
         })
